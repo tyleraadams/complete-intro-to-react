@@ -1,6 +1,5 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
-const MyTitle = require('./MyTitle')
 
 // stateless componenet
 const MyFirstComponent = () => (
