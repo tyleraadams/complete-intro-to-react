@@ -5,7 +5,7 @@ var MyTitle = React.createClass({
   render() {
     return(
       div(null,
-        h1(null, 'CHECK OUT THIS STUFF')
+        h1(null, this.props.title)
       )
     )
   }
@@ -14,8 +14,8 @@ var MyTitle = React.createClass({
 var MyTitleFactory = React.createFactory(MyTitle);
 var MyFirstComponent = (
   div(null,
-    MyTitleFactory(null),
-    React.createElement(MyTitle, null)
+    MyTitleFactory({title: 'Props are great'}),
+    React.createElement(MyTitle, {title: 'use your props like a big boy'})
   )
 )
 ReactDOM.render(MyFirstComponent, document.getElementById('app'))
