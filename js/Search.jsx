@@ -1,12 +1,13 @@
 const React = require('react')
 const data = require('../public/data')
+const ShowCard = require('./ShowCard')
 
 // stateless componenet
 const Search = () => (
   <div className='container'>
-    {data.shows.map((show) => {
-      return <h3>{show.title}</h3>
-    })}
+    <div className='shows'>
+      {data.shows.map((show, index) => <ShowCard {...show} key={index} id={index} />)}
+    </div>
   </div>
 )
 
