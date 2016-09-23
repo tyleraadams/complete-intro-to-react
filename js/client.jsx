@@ -2,12 +2,14 @@ const React = require('react')
 const ReactDOM = require('react-dom')
 
 // stateless componenet
-const MyFirstComponent = () => (
-  <div>
-    <MyTitle title='Whatevs' color='rebeccapurple' />
-    <MyTitle title='LOL' color='papayawhip' />
-    <MyTitle title='OMG OMG' color='#f06d06' />
+const App = () => (
+  <div className='app-container'>
+    <div className='home-info'>
+      <h1 className='title'>svideo</h1>
+      <input className='search' type='text' placeholder='Search' />
+      <button className='browse-all'> or Browse All</button>
+    </div>
   </div>
 )
 
-ReactDOM.render(<MyFirstComponent />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))
