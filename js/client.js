@@ -1,9 +1,10 @@
+/* globals React ReactDOM */
 var div = React.DOM.div
 var h1 = React.DOM.h1
 
 var MyTitle = React.createClass({
-  render() {
-    return(
+  render () {
+    return (
       div(null,
         h1({style: {color: this.props.color}}, this.props.title)
       )
@@ -11,7 +12,8 @@ var MyTitle = React.createClass({
   }
 })
 
-var MyTitleFactory = React.createFactory(MyTitle);
+var MyTitleFactory = React.createFactory(MyTitle)
+
 var MyFirstComponent = (
   div(null,
     MyTitleFactory({title: 'Props are great', color: 'peru'}),
